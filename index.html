@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bay Area Persian Choir</title>
+<meta name="description" content="Bay Area Persian Choir — a community choir preserving, cultivating and promoting the rich heritage of Persian music in the San Francisco Bay Area." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Bay Area Persian Choir home">
+      <span class="logo" aria-hidden="true">BA</span>
+      <span class="brand-text">
+        <span class="brand-name">Bay Area Persian Choir</span>
+        <span class="brand-tag">Community choir • Rehearsals weekly</span>
+      </span>
+    </a>
+
+    <button class="mobile-toggle" aria-controls="main-nav" aria-expanded="false" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span><span class="sr-only">Menu</span>
+    </button>
+
+    <nav id="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+      <span class="nav-social">
+        <a href="https://www.youtube.com/@Choir-BayAreaPersian" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/bayareapersianchoir/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
+        </a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <img class="hero-bg" src="assets/images/group.jpg" alt="" aria-hidden="true">
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-content">
+      <p class="eyebrow">San Francisco Bay Area</p>
+      <h1 id="hero-heading">Welcome to<br><em>Bay Area Persian Choir</em></h1>
+      <p class="lead">We perform Persian songs and world music — all levels welcome. Join us for rehearsals and community events.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#events">See upcoming events</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="wrap about-grid">
+      <div class="about-text">
+        <p class="eyebrow">About Us</p>
+        <h2>Preserving the heritage of Persian music</h2>
+        <p>Bay Area Persian Choir is a community choir which serves the larger San Francisco Bay Area and strives to preserve, cultivate and promote the rich heritage of Persian music. The group hopes to be able to strengthen the connective tissue in the community through music. The repertoire of choir is comprised of new choral arrangements of all-time classics of Persian music as well as Persian folk and spiritual songs and new compositions.</p>
+        <ul class="pillars">
+          <li><strong>Classics</strong><span>New choral arrangements of timeless Persian songs</span></li>
+          <li><strong>Folk &amp; Spiritual</strong><span>Songs from across Iran's regions and traditions</span></li>
+          <li><strong>New Works</strong><span>Original compositions for choir</span></li>
+        </ul>
+      </div>
+      <div class="about-media">
+        <img src="assets/images/choir46-2.jpg" alt="Bay Area Persian Choir performing on stage" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events" class="section section-dark">
+    <div class="wrap">
+      <p class="eyebrow">Upcoming Events</p>
+      <h2>Join us in concert</h2>
+      <article class="event-card">
+        <div class="event-date" aria-hidden="true">
+          <span class="month">Feb</span>
+          <span class="day">28</span>
+          <span class="year">2027</span>
+        </div>
+        <div class="event-info">
+          <h3>Bay Area Persian Choir Concert</h3>
+          <p class="event-meta"><time datetime="2027-02-28">Saturday, February 28, 2027</time></p>
+          <p class="event-venue">Mountain View Center for the Performing Arts<br>500 Castro St, Mountain View, CA 94041</p>
+        </div>
+        <div class="event-action">
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Mountain+View+Center+for+the+Performing+Arts%2C+500+Castro+St%2C+Mountain+View%2C+CA+94041" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Media -->
+  <section id="media" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Media</p>
+          <h2>Moments from the stage</h2>
+        </div>
+        <p class="muted">Watch our performances and follow us for news, rehearsal moments and concert updates.</p>
+      </div>
+
+      <div class="gallery">
+        <img class="g-wide" src="assets/images/choir45.jpg" alt="Choir in concert" loading="lazy">
+        <img class="g-wide" src="assets/images/Stanfordchoir.JPG" alt="Choir performing on stage" loading="lazy">
+        <img class="g-wide" src="assets/images/deanzapic.jpg" alt="Choir on stage deanza" loading="lazy">
+        <img class="g-wide" src="assets/images/Ostad2.jpg" alt="Choir on stage" loading="lazy">
+ 
+    </div>
+
+      <div class="social-grid">
+        <a class="social-card" href="https://www.youtube.com/@Choir-BayAreaPersian" target="_blank" rel="noopener">
+          <span class="social-icon yt"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></span>
+          <span><strong>Watch on YouTube</strong><span class="muted">@Choir-BayAreaPersian</span></span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="social-card" href="https://www.instagram.com/bayareapersianchoir/" target="_blank" rel="noopener">
+          <span class="social-icon ig"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></span>
+          <span><strong>Follow on Instagram</strong><span class="muted">@bayareapersianchoir</span></span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-contact">
+    <div class="wrap contact-inner">
+      <p class="eyebrow">Contact Us</p>
+      <h2>We'd love to hear from you</h2>
+      <p class="lead">Interested in singing with us, attending a concert, or collaborating? Send us an email and we'll get back to you.</p>
+      <a class="contact-email" href="mailto:bayareapersianchoir@gmail.com">bayareapersianchoir@gmail.com</a>
+      <div><a class="btn btn-gold" href="mailto:bayareapersianchoir@gmail.com">Email us</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="logo" aria-hidden="true">BA</span>
+      <span>Bay Area Persian Choir</span>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="https://www.youtube.com/@Choir-BayAreaPersian" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/bayareapersianchoir/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:bayareapersianchoir@gmail.com">bayareapersianchoir@gmail.com</a>
+    </nav>
+    <p class="copyright">© <span id="year">2026</span> Bay Area Persian Choir</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(btn){
+  var nav=document.getElementById('main-nav');
+  var open=nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+}
+document.querySelectorAll('#main-nav a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('main-nav').classList.remove('open');
+    document.querySelector('.mobile-toggle').setAttribute('aria-expanded','false');
+  });
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+window.addEventListener('scroll',function(){
+  document.querySelector('.site-header').classList.toggle('scrolled',window.scrollY>40);
+});
+</script>
+<script async src="/.netlify/scripts/ar" data-netlify-deploy-id="6acdc6941f59507f0df28702" data-netlify-site-id="fdfe948c-b530-4210-aa68-27f1708463d8" data-agent-runner-id="6acdc4a694e43bb88e86f9b6"></script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=owner-private" data-nf-variant="owner-private" data-netlify-site-id="fdfe948c-b530-4210-aa68-27f1708463d8" data-app-host="app.netlify.com"></script>
