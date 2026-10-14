@@ -106,17 +106,17 @@
         </div>
         <div class="event-info">
           <h3>Bay Area Persian Choir Concert</h3>
-          <p class="event-meta"><time datetime="2027-02-28">Sunday, February 28, 2027</time></p>
+          <p class="event-meta"><time datetime="2027-02-28">Saturday, February 28, 2027</time></p>
           <p class="event-venue">Mountain View Center for the Performing Arts<br>500 Castro St, Mountain View, CA 94041</p>
         </div>
         <div class="event-action">
           <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Mountain+View+Center+for+the+Performing+Arts%2C+500+Castro+St%2C+Mountain+View%2C+CA+94041" target="_blank" rel="noopener">Get directions</a>
           <div class="cal-wrap">
-            <button type="button" class="btn btn-gold" id="cal-btn" aria-haspopup="true" aria-expanded="false" aria-controls="cal-menu">Add it to calendar</button>
+            <button type="button" class="btn btn-gold" id="cal-btn" aria-haspopup="true" aria-expanded="false" aria-controls="cal-menu">Add to calendar</button>
             <div class="cal-menu" id="cal-menu" role="menu" hidden>
               <a role="menuitem" id="cal-google" href="#" target="_blank" rel="noopener">Google Calendar</a>
               <a role="menuitem" id="cal-outlook" href="#" target="_blank" rel="noopener">Outlook.com</a>
-              <a role="menuitem" id="cal-ics" href="#">Apple Calendar / other (.ics)</a>
+              <a role="menuitem" id="cal-ics" href="event.ics">Apple Calendar / other (.ics)</a>
             </div>
           </div>
         </div>
@@ -206,8 +206,8 @@ document.getElementById('year').textContent=new Date().getFullYear();
   var EVENT={
     title:'Bay Area Persian Choir Concert',
     date:'2027-02-28',
-    startTime:'7:00',
-    endTime:'9:00',
+    startTime:'19:00',
+    endTime:'21:00',
     location:'Mountain View Center for the Performing Arts, 500 Castro St, Mountain View, CA 94041',
     description:'Bay Area Persian Choir concert. More information: https://www.bayareapersianchoir.com/index.html'
   };
@@ -246,24 +246,6 @@ document.getElementById('year').textContent=new Date().getFullYear();
   else{o+='&startdt='+EVENT.date+'T'+EVENT.startTime+':00&enddt='+EVENT.date+'T'+(EVENT.endTime||EVENT.startTime)+':00';}
   document.getElementById('cal-outlook').href=o;
 
-  // .ics file (Apple Calendar, Outlook desktop, etc.)
-  function esc(t){return String(t).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n');}
-  document.getElementById('cal-ics').addEventListener('click',function(e){
-    e.preventDefault();
-    var now=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'');
-    var lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Bay Area Persian Choir//Website//EN','CALSCALE:GREGORIAN','BEGIN:VEVENT',
-      'UID:'+compactDate(EVENT.date)+'-concert@bayareapersianchoir.com','DTSTAMP:'+now];
-    if(allDay){lines.push('DTSTART;VALUE=DATE:'+startG,'DTEND;VALUE=DATE:'+endG);}
-    else{lines.push('DTSTART:'+startG,'DTEND:'+endG);}
-    lines.push('SUMMARY:'+esc(EVENT.title),'LOCATION:'+esc(EVENT.location),'DESCRIPTION:'+esc(EVENT.description),'END:VEVENT','END:VCALENDAR');
-    var blob=new Blob([lines.join('\r\n')],{type:'text/calendar;charset=utf-8'});
-    var a=document.createElement('a');
-    a.href=URL.createObjectURL(blob);a.download='bay-area-persian-choir-concert.ics';
-    document.body.appendChild(a);a.click();document.body.removeChild(a);
-    setTimeout(function(){URL.revokeObjectURL(a.href);},1000);
-    closeMenu();
-  });
-
   // Menu open/close
   var btn=document.getElementById('cal-btn'), menu=document.getElementById('cal-menu');
   function closeMenu(){menu.hidden=true;btn.setAttribute('aria-expanded','false');}
@@ -274,7 +256,7 @@ document.getElementById('year').textContent=new Date().getFullYear();
     btn.setAttribute('aria-expanded',open?'true':'false');
     if(open) menu.querySelector('a').focus();
   });
-  menu.addEventListener('click',function(e){ if(e.target.tagName==='A' && e.target.id!=='cal-ics') closeMenu(); });
+  menu.addEventListener('click',function(e){ if(e.target.tagName==='A') closeMenu(); });
   document.addEventListener('click',function(e){ if(!menu.hidden && !menu.contains(e.target)) closeMenu(); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !menu.hidden){closeMenu();btn.focus();} });
 })();
@@ -282,7 +264,7 @@ window.addEventListener('scroll',function(){
   document.querySelector('.site-header').classList.toggle('scrolled',window.scrollY>40);
 });
 </script>
-<script async src="/.netlify/scripts/ar" data-netlify-deploy-id="6acdc6941f59507f0df28702" data-netlify-site-id="fdfe948c-b530-4210-aa68-27f1708463d8" data-agent-runner-id="6acdc4a694e43bb88e86f9b6"></script>
+<!-- <script async src="/.netlify/scripts/ar" data-netlify-deploy-id="6acdc6941f59507f0df28702" data-netlify-site-id="fdfe948c-b530-4210-aa68-27f1708463d8" data-agent-runner-id="6acdc4a694e43bb88e86f9b6"></script> -->
 </body>
 </html>
-<script async src="/.netlify/scripts/hud?variant=owner-private" data-nf-variant="owner-private" data-netlify-site-id="fdfe948c-b530-4210-aa68-27f1708463d8" data-app-host="app.netlify.com"></script>
+<!-- <script async src="/.netlify/scripts/hud?variant=owner-private" data-nf-variant="owner-private" data-netlify-site-id="fdfe948c-b530-4210-aa68-27f1708463d8" data-app-host="app.netlify.com"></script> -->
